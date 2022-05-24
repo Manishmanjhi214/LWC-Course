@@ -1,0 +1,47 @@
+<template>
+    <div class="main_Container" style="display: flex">
+    <div class=" slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+            Task List
+        </h2>
+        <div class="slds-p-around_medium slds-p-left_none">
+            <lightning-input
+            type="text"
+            placeholder="Enter new task"
+            variant="label-hidden"
+            value={newTask}
+            label="New Task"
+           onchange={updateNewTask}
+            required
+        > </lightning-input>
+            <lightning-combobox
+            name="Priority"
+            label="Priority"
+            value={value}
+            placeholder="Select Priority"
+            options={options}
+            onchange={comboBoxOnChange}
+             ></lightning-combobox>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" 
+            label="Add Task to List" 
+            title="Click Me" 
+            onclick={addTaskToList}></lightning-button>
+        </div>
+    </div>
+   
+    <div class="slds-p-left_medium slds-float_right">
+        <h2 class="slds-text-heading_medium slds-m-bottom_medium ">
+            Task Added to List
+        </h2>
+          <template for:each={todoTasks} for:item="todoTask">
+                        <li class="slds-p-left_medium" key={todoTask.id}>
+                                    
+                                    Task:{todoTask.name}
+                                    <br>
+                                    Priority:{todoTask.priority}
+                               </li></template>
+    </div>
+</div>
+</template>

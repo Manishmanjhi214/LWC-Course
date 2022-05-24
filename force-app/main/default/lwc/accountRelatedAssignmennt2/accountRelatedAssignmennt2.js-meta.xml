@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <description>This  compoennet is used to retrieve Account Record Properties</description>
+    <masterLabel>Account Record Properties Component</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Account</object>
+            </objects>
+            <property name="recordName" type="String" />
+            <property name="date" type="String" />
+            <property name="color" type="String" />
+            <property name ="type" label="Account Type" type="String" datasource="New,Provisioned,Suspended" description="Account Type" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
