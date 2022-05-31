@@ -1,11 +1,11 @@
 import { LightningElement,track } from 'lwc';
 
 export default class SimpleCalculator extends LightningElement {
-    @track checkResults;
+    checkResults;
     firstNumber;
     secondNumber;
-    @track results=[];
-    @track previuosResults= false;
+    results=[];
+    previuosResults= false;
 
  numberChangeHandler(event) {
     const inputBoxName = event.target.name;
