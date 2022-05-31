@@ -19,7 +19,7 @@ export default class ComboboxBasic extends LightningElement {
     updateNewTask(event) {
         this.newTask = event.target.value;
     }
-    addTaskToList(event){
+    addTaskToList(){
         console.log("Button Clicked");
         this.todoTasks.push({
             id: this.todoTasks.length + 1,
