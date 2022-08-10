@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Call Methods On Child Component">
+        <lightning-input value={value} label="Radio Value" onchange={onInputChangeHandler}></lightning-input>
+        <lightning-button label="Select Radio" onclick={checkboxSelectHandler}></lightning-button>
+        <div> I am a DIV in PArent Component</div>
+        <c-radio-child></c-radio-child>
+    </lightning-card>
+</template>

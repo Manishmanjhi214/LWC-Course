@@ -1,0 +1,11 @@
+<template>
+    <template if:true={showClassInfo}>
+        <div class="slds-p-around_medium lgc-bg">
+        <lightning-tile label={classInfo.classNo}>
+        <p class="slds-truncate" title={classInfo.buildingName}>
+            Building Name:{classInfo.buildingName}
+        </p>      
+        </lightning-tile>
+        </div>
+    </template>
+</template>

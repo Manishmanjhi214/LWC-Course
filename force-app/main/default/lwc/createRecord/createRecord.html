@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Manager" icon-name="standard:account">
+        <lightning-layout>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-card  title="Create a new Account" icon-name="standard:account">
+                    <lightning-input type="text" name="Account Name" label="Name" onchange={accountNameChangeHandler}></lightning-input>
+                    <lightning-input type="phone" name="Account Phone" label="Phone" onchange={accountPhoneChangeHandler}></lightning-input>
+                    <lightning-input type="url" name="Account Website" label="Website" onchange={accountWebsiteChangeHandler}></lightning-input>
+                    <lightning-button label="Create Account" onclick={createAccount}></lightning-button>
+                </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

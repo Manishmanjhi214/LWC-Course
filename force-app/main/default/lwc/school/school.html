@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="School Information">
+       <ul>
+           <template for:each={schoolInfo} for:item="cls">
+               <li key ={cls.classNo} style="padding: 10px">
+                   <c-classroom class-info={cls} show-class-info>
+                   </c-classroom>
+               </li>
+           </template>
+       </ul>
+    </lightning-card>
+</template>
